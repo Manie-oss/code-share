@@ -1,0 +1,55 @@
+*{
+  font-family: "JetBrains Mono", monospace;
+  }
+
+body {
+  background-color: #181c1f;
+  color: whitesmoke;
+}
+
+.main-container{
+  padding: 1rem;
+}
+
+.header{
+  text-align: center;
+}
+
+.editor-header{
+  display: flex;
+  justify-content: flex-end;
+  background-color: #252b2e;
+  padding: 1rem 1rem;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.editor-content{
+  border: "2px solid darkgray";
+  font-family: '"Fira code", "Fira Mono", monospace';
+  background-color: #272822;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.text-editor:focus-visible{
+  outline: none
+}
+
+.text-editor-icons{
+  height: 1.25rem;
+  width: 2rem;
+}
+
+.icon-btn{
+  margin-left: 2px;
+  padding: 5px;
+  background-color: #252b2e;
+  color: white;
+  border: none;
+  text-align: center;
+  opacity: 0.6;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.icon-btn:hover {opacity: 1}
+
