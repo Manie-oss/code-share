@@ -1,6 +1,13 @@
+import React from 'react';
 import './style.css';
 
-export function Modal({ handleClose, show, children }){
+interface ModalInterface {
+  handleClose: ()=>void, 
+  show: boolean,
+  children: React.ReactNode
+}
+
+export function Modal({ handleClose, show, children }: ModalInterface){
   const showHideClassName = show ? "modal display-block" : "modal display-none";
 
   return (

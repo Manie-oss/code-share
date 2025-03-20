@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import { useParams, useLocation } from "react-router";
+import { useParams } from "react-router";
 import Editor from "react-simple-code-editor";
-import { highlight, languages } from "prismjs/components/prism-core";
-import { CopyIcon, ResetIcon, ShareIcon } from "./../../assets/icons.jsx";
+import { highlight, languages } from "prismjs";
+import { CopyIcon, ResetIcon, ShareIcon } from "../../assets/icons";
 import {Modal} from "./../modal"
 
 function TextEditor() {
@@ -88,7 +88,7 @@ function TextEditor() {
             placeholder="// Write your code here"
             value={code}
             onValueChange={(code) => setCode(code)}
-            highlight={(code) => highlight(code, languages.js)}
+            highlight={(code) => highlight(code, languages.js, 'js')}
             padding={10}
             style={{ height: "75vh" }}
             textareaClassName="text-editor"
