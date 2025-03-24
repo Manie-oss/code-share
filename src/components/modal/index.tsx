@@ -1,3 +1,4 @@
+import toast from 'react-hot-toast';
 import { useAppContext } from '../../context/AppStateProvider';
 import './style.css';
 
@@ -11,12 +12,13 @@ export function Modal(){
 
   function onCopyLink() {
     navigator.clipboard.writeText(shareLink);
-    alert("Link copied to clipboard");
+    toast.success("Link copied to clipboard")
   }
-  const showHideClassName = showModal ? "display-block" : "display-none";
+
+  const showHideClassName = showModal ? "" : "display-none";
 
   return (
-    <div className={` backdrop ${showHideClassName}`} onClick={hideModal} >
+    <div className={`backdrop ${showHideClassName}`} onClick={hideModal} >
       <div className="modal" onClick={(e) => e.stopPropagation()}>
         <p className="modalHeading">Copy this link</p>
         <p className="modalDescription shareLink" onClick={onCopyLink}>{shareLink}</p>
