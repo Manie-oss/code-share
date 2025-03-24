@@ -1,12 +1,5 @@
-import React from 'react';
 import './style.css';
 import { useAppContext } from '../../context/AppStateProvider';
-
-interface ModalInterface {
-  handleClose: ()=>void, 
-  show: boolean,
-  children: React.ReactNode
-}
 
 export function Modal(){
 
