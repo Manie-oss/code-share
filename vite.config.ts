@@ -6,8 +6,8 @@ import prism from 'vite-plugin-prismjs';
 export default defineConfig({
   plugins: [react(),
     prism({
-      languages: ['javascript', 'css', 'html', 'typescript'],
-      plugins: ['line-numbers'],
+      languages: ['javascript', 'css', 'html', 'typescript', 'cpp'],
+      plugins: ['line-numbers', 'show-language'],
       theme: 'tomorrow',
       css: true,
     }),

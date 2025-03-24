@@ -3,17 +3,19 @@
   }
 
 body {
-  background-color: #181c1f;
+  background-color: #0d131e;
   color: whitesmoke;
 }
 
 .main-container{
-  padding: 1rem;
+  padding: 2rem 1rem;
 }
 
-.header{
+/* .header{
+  display: flex;
+  justify-content: flex-start; 
   text-align: center;
-}
+} */
 
 .editor-header{
   display: flex;
@@ -39,17 +41,7 @@ body {
   width: 2rem;
 }
 
-.icon-btn{
-  margin-left: 2px;
-  padding: 5px;
-  background-color: #252b2e;
-  color: white;
-  border: none;
-  text-align: center;
-  opacity: 0.6;
-  transition: 0.3s;
-  cursor: pointer;
-}
 
-.icon-btn:hover {opacity: 1}
+
+
 

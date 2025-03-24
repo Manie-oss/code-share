@@ -1,5 +1,6 @@
 import React from 'react';
 import './style.css';
+import { useAppContext } from '../../context/AppStateProvider';
 
 interface ModalInterface {
   handleClose: ()=>void, 
@@ -7,14 +8,26 @@ interface ModalInterface {
   children: React.ReactNode
 }
 
-export function Modal({ handleClose, show, children }: ModalInterface){
-  const showHideClassName = show ? "modal display-block" : "modal display-none";
+export function Modal(){
+
+  const { shareLink, showModal, setShowModal } = useAppContext();
+
+  function hideModal() {
+    setShowModal(false);
+  }
+
+  function onCopyLink() {
+    navigator.clipboard.writeText(shareLink);
+    alert("Link copied to clipboard");
+  }
+  const showHideClassName = showModal ? "modal display-block" : "modal display-none";
 
   return (
     <div className={showHideClassName}>
       <section className="modal-main">
-        {children}
-        <button type="button" onClick={handleClose}>
+        <p>Copy this link: {shareLink}</p>
+        <button onClick={onCopyLink}>Copy</button>
+        <button type="button" onClick={hideModal}>
           Close
         </button>
       </section>

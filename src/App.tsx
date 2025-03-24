@@ -1,13 +1,17 @@
+import { Modal } from "./components/modal";
+import Header from "./components/header";
 import TextEditor from "./components/text-editor";
-import { Routes, Route } from "react-router";
 import './App.css';
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<TextEditor />} />
-      <Route path="/:id" element={<TextEditor />} />
-    </Routes>
+    <div className="main-container">
+      <div className="editor-container">
+        <Header />
+        <TextEditor />
+      </div>
+      <Modal />
+    </div>
   );
 }
 
